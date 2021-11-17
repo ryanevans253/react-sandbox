@@ -11,3 +11,5 @@ class Vol extends React.Component {
     this.setState((prevState) => ({}));
   }
 }
+
+export default volume;
