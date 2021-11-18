@@ -8,6 +8,7 @@ import { AlignVerticalCenter } from "@mui/icons-material";
 import { autocompleteClasses } from "@mui/material";
 import Tweet from "./components/tweet";
 import React, { useState } from "react";
+import image from "./images/monstera.png";
 
 function App() {
   const [isClicked, setClicked] = useState(false);
@@ -37,12 +38,13 @@ function App() {
           flexWrap: "wrap",
           height: "70vh",
           width: "100vw",
-          backgroundColor: "#e3ffff",
+          // backgroundColor: "#e3ffff",
           alignItems: "center",
           justifyContent: "center",
           // alignItems: "",
         }}
       >
+        <MediaCard component="img" src={image} />
         <Tweet />
         <Box />
         <Box />

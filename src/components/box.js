@@ -1,28 +1,25 @@
-// import { Box } from "@mui/system";
-import React from "react";
-import Button from "@mui/material/Button";
-import Card from "@mui/material/Card";
-import Avatar from "@mui/material/Avatar";
-import ButtonBaseRoot from "@mui/material/ButtonBase";
+import * as React from "react";
+import Box from "@mui/material/Box";
+import EmailInput from "./components/email";
 
-const Box = () => {
+export default function BoxSx() {
   return (
-    <Card
+    <Box
       sx={{
-        maxWidth: 345,
-        minWidth: 300,
-        maxHeight: 200,
-        margin: 2,
-        padding: 2,
+        width: "40vw",
+        height: "60vh",
+        backgroundColor: "#357a38",
+        opacity: [0.3],
+        "&:hover": {
+          backgroundColor: "#357a38",
+          opacity: [0.4],
+        },
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
       }}
     >
-      <Avatar />
-      <h4> Heading</h4>
-      <p>Body content goes here</p>
-      <Button style={{ marginTop: "auto" }}>Submit</Button>
-      <ButtonBaseRoot />
-    </Card>
+      <EmailInput />
+    </Box>
   );
-};
-
-export default Box;
+}

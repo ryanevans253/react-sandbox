@@ -13,10 +13,15 @@ export default function MediaCard() {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
+        // component="img"
+        // height="140"
+        // // image="/static/images/cards/contemplative-reptile.jpg"
+        // image="/images/planter.jpeg"
+        // alt="monstera"
+
         component="img"
-        height="140"
-        // image="/static/images/cards/contemplative-reptile.jpg"
-        image="/images/planter.jpeg"
+        style={{ height: 5, paddingTop: "56%" }}
+        image={require("../images/monstera.png")}
         alt="monstera"
       />
       <CardActionArea>
