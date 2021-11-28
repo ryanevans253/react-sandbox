@@ -1,16 +1,16 @@
-import React from "react";
-import BoxSx from "./components/box";
-import Hands from "./components/butt";
-import Form from "./components/Form";
+import { Avatar } from "@mui/material";
+import React, { useState } from "react";
+import AddButton from "./components/AddButton";
+import Todo from "./components/Todo";
 
 function App() {
   return (
     <div>
-      <Hands name="ryan" />
-      <Hands name="paul" age="23" />
-      <Form placeholder="pen">test</Form>
-      <h1>hello</h1>
-      <BoxSx />
+      <div>
+        <Avatar />
+        <h1>Ryan's to do list</h1>
+      </div>
+      <Todo name="ryanne" />
     </div>
   );
 }
