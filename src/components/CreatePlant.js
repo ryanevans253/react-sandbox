@@ -1,6 +1,6 @@
 import { Button, Container, TextField, Typography } from "@mui/material";
 import React, { useState } from "react";
-// import { makeStyles } from "@material-ui/styles";
+import { makeStyles } from "@mui/styles";
 
 export default function Create() {
   const [name, setName] = useState("");
@@ -9,13 +9,13 @@ export default function Create() {
   const [height, setHeight] = useState("");
   const [cycle, setCycle] = useState("");
 
-  //   const useStyles = makeStyles({
-  //     field: {
-  //       marginTop: 20,
-  //       marginBottom: 20,
-  //       display: "block",
-  //     },
-  //   });
+  const useStyles = makeStyles({
+    field: {
+      marginTop: 20,
+      marginBottom: 20,
+      display: "block",
+    },
+  });
 
   return (
     <Container>
