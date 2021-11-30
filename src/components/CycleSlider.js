@@ -1,10 +1,10 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
-import FormLabel from "@mui/material";
+import { FormLabel } from "@mui/material";
 
 function valuetext(value) {
-  return `${value}°C`;
+  return `${value}`;
 }
 
 export default function DiscreteSliderSteps() {
@@ -13,13 +13,14 @@ export default function DiscreteSliderSteps() {
       <FormLabel>Watering Cycle</FormLabel>
       <Slider
         aria-label="Small steps"
-        defaultValue={0.5}
+        defaultValue={0}
         getAriaValueText={valuetext}
-        step={0.1}
+        step={1}
         marks
-        min={-0.5}
-        max={1}
+        min={0}
+        max={30}
         valueLabelDisplay="auto"
+        color="success"
       />
     </Box>
   );

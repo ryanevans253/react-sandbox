@@ -2,6 +2,7 @@ import { Button, Container, TextField, Typography } from "@mui/material";
 import React, { useState } from "react";
 import { makeStyles } from "@mui/styles";
 import DiscreteSliderSteps from "./CycleSlider";
+import CustomizedRating from "./MoistureRating";
 
 //brings teh spacing and styles to certain components
 const useStyles = makeStyles({
@@ -23,9 +24,7 @@ export default function Create() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (name && height) {
-      console.log(name, height);
-    }
+    console.log(name, height, moisture);
   };
 
   return (
@@ -51,12 +50,13 @@ export default function Create() {
           className={classes.field}
         />
 
-        <DiscreteSliderSteps color="success" />
+        <DiscreteSliderSteps />
+        <CustomizedRating onChange={(value) => setMoisture(value)} />
         <Button
           color="success"
           type="submit"
           variant="outlined"
-          onClick={() => console.log("you clicked me")}
+          // onClick={() => console.log("you clicked me")}
         >
           Submit
         </Button>
