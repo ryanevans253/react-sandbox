@@ -16,7 +16,6 @@ const StyledRating = styled(Rating)({
 });
 
 export default function CustomizedRating(props) {
-  console.log(props);
   return (
     <Box
       sx={{

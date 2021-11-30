@@ -24,7 +24,7 @@ export default function Create() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log(name, height, moisture);
+    console.log(name, height, cycle, moisture);
   };
 
   return (
@@ -50,7 +50,7 @@ export default function Create() {
           className={classes.field}
         />
 
-        <DiscreteSliderSteps />
+        <DiscreteSliderSteps onChange={(value) => setCycle(value)} />
         <CustomizedRating onChange={(value) => setMoisture(value)} />
         <Button
           color="success"
