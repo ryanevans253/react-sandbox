@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { makeStyles } from "@mui/styles";
 import DiscreteSliderSteps from "./CycleSlider";
 import CustomizedRating from "./MoistureRating";
+import Card from "./Card";
 
 //brings teh spacing and styles to certain components
 const useStyles = makeStyles({
@@ -21,9 +22,12 @@ export default function Create() {
   const [height, setHeight] = useState("");
   const [cycle, setCycle] = useState("");
 
+  const [card, setCard] = useState({ show: false });
+
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    setCard({ show: true });
+    console.log(card);
     console.log(name, height, cycle, moisture);
   };
 
@@ -56,9 +60,15 @@ export default function Create() {
           color="success"
           type="submit"
           variant="outlined"
-          // onClick={() => console.log("you clicked me")}
+          // onClick={() => {
+          //   return <Card />;
+          // }}
         >
           Submit
+        </Button>
+
+        <Button color="warning" variant="outlined" card={false}>
+          test
         </Button>
       </form>
       <Typography variant="h6"></Typography>
