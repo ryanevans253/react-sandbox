@@ -21,6 +21,7 @@ export default function Create() {
   const [light, setLight] = useState("");
   const [height, setHeight] = useState("");
   const [cycle, setCycle] = useState("");
+  const [sun, setSun] = useState("");
 
   const [card, setCard] = useState({ show: false });
 
